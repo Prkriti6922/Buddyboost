@@ -1,0 +1,134 @@
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9fa;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a2cd4;
+}
+.header-right .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #6a2cd4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Main container */
+.create-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.create-container h1 {
+  margin-bottom: 1.5rem;
+  color: #4b1dff;
+  text-align: center;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.form-group textarea {
+  resize: vertical;
+}
+.form-group.split {
+  display: flex;
+  gap: 1rem;
+}
+.form-group.split > div {
+  flex: 1;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.form-buttons button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#cancelBtn {
+  background: #f0f0f0;
+  color: #555;
+}
+#cancelBtn:hover {
+  background: #e6e6e6;
+}
+#createBtn {
+  background: #6a2cd4;
+  color: white;
+}
+#createBtn:hover {
+  background: #5a22c8;
+}
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #9333ea;
+  font-weight: 600;
+  cursor: pointer;
+}

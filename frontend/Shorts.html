@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuddyBoost — Shorts</title>
+  <link rel="stylesheet" href="css/shorts.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">⚡ BuddyBoost</div>
+    <div class="header-right">
+      <button class="btn purple" id="openCreateShort">+ Create Your Short</button>
+      <div class="avatar">G</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title">Community Shorts</h1>
+    <section id="shortsGrid" class="shorts-grid">
+      <!-- injected video‑cards here -->
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <button onclick="location.href='home.html'">🏠 Home</button>
+    <button onclick="location.href='create.html'">➕ Create</button>
+    <button class="active">🎬 Shorts</button>
+    <button onclick="location.href='account.html'">👤 Account</button>
+  </footer>
+
+  <!-- Create Short Modal (with upload option) -->
+  <div id="createShortModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Create a New Short</h2>
+      <form id="shortForm">
+        <div class="form-group">
+          <label>Choose video source:</label>
+          <select id="videoSourceSelect">
+            <option value="youtube">YouTube Link / ID</option>
+            <option value="upload">Upload Video File</option>
+          </select>
+        </div>
+
+        <!-- YouTube input -->
+        <div class="form-group" id="youtubeInputGroup">
+          <label for="videoUrl">YouTube URL or ID</label>
+          <input type="text" id="videoUrl" placeholder="https://youtu.be/VIDEO_ID or VIDEO_ID" />
+        </div>
+
+        <!-- Upload input -->
+        <div class="form-group hidden" id="uploadInputGroup">
+          <label for="videoFile">Select video file</label>
+          <input type="file" id="videoFile" accept="video/*" />
+        </div>
+
+        <div class="form-group">
+          <label for="shortTitle">Title / Caption</label>
+          <input type="text" id="shortTitle" placeholder="e.g. Morning Yoga Flow" required />
+        </div>
+
+        <div class="form-group">
+          <label for="author">Your Name</label>
+          <input type="text" id="author" placeholder="e.g. Jane Doe" required />
+        </div>
+
+        <div class="form-buttons">
+          <button type="button" id="cancelShort">Cancel</button>
+          <button type="submit" id="submitShort">Add Short</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/shorts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuddyBoost — Account</title>
+
+  <link rel="stylesheet" href="css/account.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">⚡ BuddyBoost</div>
+    <div class="header-right">
+      <div class="avatar" id="navAvatar">G</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="profile-card">
+      <div class="avatar-large" id="profileAvatar"></div>
+
+      <div class="profile-info">
+        <h2 id="userName">Google User</h2>
+        <p id="userEmail">user@gmail.com</p>
+
+        <div class="tags" id="userTags"></div>
+
+        <button id="editProfileBtn" class="btn-purple">Edit Profile</button>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat">
+        <div id="statActive">0</div><span>Active Challenges</span>
+      </div>
+      <div class="stat">
+        <div id="statStreak">12</div><span>Day Streak</span>
+      </div>
+      <div class="stat">
+        <div id="statGoals">24</div><span>Goals Completed</span>
+      </div>
+      <div class="stat">
+        <div id="statDays">87</div><span>Total Days</span>
+      </div>
+    </section>
+
+    <section class="box">
+      <h3>Achievements</h3>
+      <div id="achievementsList"></div>
+    </section>
+
+    <section class="box">
+      <h3>Recent Activity</h3>
+      <ul id="activityList"></ul>
+    </section>
+
+  </main>
+
+  <footer class="bottom-nav">
+    <button onclick="location.href='home.html'">🏠 Home</button>
+    <button onclick="location.href='create.html'">➕ Create</button>
+    <button onclick="location.href='shorts.html'">🎬 Shorts</button>
+    <button class="active">👤 Account</button>
+  </footer>
+
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+
+      <h2>Edit Profile</h2>
+
+      <label>Name</label>
+      <input type="text" id="editName">
+
+      <label>Email</label>
+      <input type="email" id="editEmail">
+
+      <label>Tags (comma separated)</label>
+      <input type="text" id="editTags">
+
+      <label>Profile Photo</label>
+      <input type="file" id="editPhoto" accept="image/*">
+
+      <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <button id="deleteAccountBtn" class="btn-danger">Delete Account</button>
+
+        <button id="logoutBtn" class="cancel" style="background: #fca5a5; color: #7f1d1d;">Log Out</button>
+      </div>
+
+      <div class="modal-actions">
+        <button class="cancel" id="cancelEdit">Cancel</button>
+        <button class="save" id="saveEdit">Save</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="deleteModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Delete Account</h2>
+      <p>This action cannot be undone. Are you sure?</p>
+
+      <div class="modal-actions">
+        <button class="cancel" id="cancelDelete">Cancel</button>
+        <button class="delete" id="confirmDelete">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/account.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuddyBoost — Rewards</title>
+  <link rel="stylesheet" href="css/rewards.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">⚡ BuddyBoost</div>
+    <div class="header-right">
+      <div class="avatar" id="navAvatar">G</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Points / Rewards Summary -->
+    <section class="rewards-summary">
+      <div class="points-container">
+        <div class="points-label">Your Points</div>
+        <div class="points-value" id="userPoints">0</div>
+      </div>
+    </section>
+
+    <!-- Available Rewards -->
+    <section class="rewards-grid" id="rewardsGrid">
+      <!-- JS will inject reward cards here -->
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <footer class="bottom-nav">
+    <button onclick="location.href='home.html'">🏠 Home</button>
+    <button onclick="location.href='create.html'">➕ Create</button>
+    <button onclick="location.href='shorts.html'">🎬 Shorts</button>
+    <button onclick="location.href='account.html'">👤 Account</button>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/rewards.js"></script>
+</body>
+
+</html>

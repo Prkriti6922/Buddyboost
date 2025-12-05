@@ -1,0 +1,98 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.onboarding-container {
+    width: 85%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 2rem 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  color: #7a1fa2;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.step-indicator {
+  margin: 1rem 0;
+}
+
+.step-indicator span {
+  display: inline-block;
+  background: #eee;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px;
+  color: #7a1fa2;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.motivation-btn {
+  background-color: white;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.motivation-btn:hover {
+  border-color: #7a1fa2;
+}
+
+.motivation-btn.selected {
+  background-color: #7a1fa2;
+  color: white;
+  border-color: #7a1fa2;
+}
+
+#continueBtn {
+  background: linear-gradient(90deg, #a85ff7, #ef5fa8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+#continueBtn:disabled {
+  background: #d3b5f0;
+  cursor: not-allowed;
+}

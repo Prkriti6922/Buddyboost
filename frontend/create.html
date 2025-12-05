@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Challenge | BuddyBoost</title>
+  <link rel="stylesheet" href="css/create.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">⚡ BuddyBoost</div>
+    <div class="header-right">
+      <div class="avatar">G</div>
+    </div>
+  </header>
+
+  <main class="create-container">
+    <h1>Create a New Challenge</h1>
+
+    <form id="challengeForm">
+
+      <div class="form-group">
+        <label for="title">Challenge Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g., 30‑Day Morning Yoga" required />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Describe your challenge, why it matters..."
+          rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">Select category</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Wellness">Wellness</option>
+          <option value="Health">Health</option>
+          <option value="Learning">Learning</option>
+          <option value="Mindfulness">Mindfulness</option>
+          <option value="Productivity">Productivity</option>
+        </select>
+      </div>
+
+      <div class="form-group split">
+        <div>
+          <label for="duration">Duration (days)</label>
+          <input type="number" id="duration" name="duration" min="1" placeholder="e.g., 30" required />
+        </div>
+        <div>
+          <label for="type">Duration Type</label>
+          <select id="type" name="type">
+            <option value="Short-term">Short-term (1–14 days)</option>
+            <option value="Long-term">Long-term (15+ days)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location (optional)</label>
+        <input type="text" id="location" name="location" placeholder="e.g., New York" />
+      </div>
+
+      <div class="form-buttons">
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit" id="createBtn">Create Challenge</button>
+      </div>
+    </form>
+
+  </main>
+
+  <footer class="bottom-nav">
+    <button onclick="location.href='home.html'">🏠 Home</button>
+    <button onclick="location.href='create.html'">➕ Create</button>
+    <button onclick="location.href='Shorts.html'">🎬 Shorts</button>
+    <button onclick="location.href='account.html'">👤 Account</button>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/create.js"></script>
+</body>
+
+</html>

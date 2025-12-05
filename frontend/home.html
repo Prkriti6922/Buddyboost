@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuddyBoost — Home</title>
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">⚡ BuddyBoost</div>
+    <div class="header-right">
+      <a href="rewards.html" class="btn purple">+ Earn Rewards</a>
+      <div class="avatar">G</div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Find Your Motivation Squad</h1>
+      <p>Join challenges, stay accountable, and achieve your goals with your community.</p>
+    </section>
+
+    <div class="alert-banner" id="locationAlert">
+      📍 Location access denied — <a href="#" onclick="requestLocation()">Enable location</a> to see nearby challenges.
+    </div>
+
+    <section class="buddy-section">
+      <div class="buddy-header">
+        <h2>🤝 Your Buddy List</h2>
+        <p>Invite friends or like-minded individuals to stay accountable together.<br>
+          Boost motivation, track shared progress, and grow together with your buddies!</p>
+      </div>
+
+      <div class="buddy-search">
+        <input type="text" id="friendSearchInput" placeholder="Search for friends…"
+          oninput="handleSearchInput(event)" />
+        <button class="btn purple" onclick="manualAddBuddy()">Add</button>
+      </div>
+
+      <div id="searchResults" class="search-results"></div>
+
+      <ul id="buddyList" class="buddy-list">
+        <!-- Buddy items will be rendered here -->
+      </ul>
+    </section>
+
+
+    <section class="motivation-section">
+      <h2>🔥 Motivation Feed</h2>
+      <ul id="motivationFeed" class="motivation-feed-list">
+        <!-- JS will inject posts here -->
+      </ul>
+    </section>
+    <!-- Challenge Detail Modal -->
+    <div id="challengeDetailModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeChallengeDetail()">✖</span>
+        <h2 id="challengeTitle">Challenge Title</h2>
+        <p id="challengeDescription">Full challenge description goes here...</p>
+        <h3>Participants</h3>
+        <ul id="participantList"></ul>
+        <button onclick="leaveChallenge()">❌ Leave Challenge</button>
+      </div>
+    </div>
+    <section class="post-box">
+      <h3>Create a Motivation Post</h3>
+      <form id="postForm">
+        <textarea id="postContent" placeholder="Share something motivational..." required></textarea>
+        <button type="submit" class="btn purple">Post</button>
+      </form>
+    </section>
+    <section class="actions">
+      <a href="create.html" class="action-box purple">
+        <h2>+ Create Challenge</h2>
+        <p>Start a new goal with your community</p>
+      </a>
+      <a href="Shorts.html" class="action-box orange">
+        <h2>📹 Create Short</h2>
+        <p>Share your challenge progress</p>
+      </a>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="all" onclick="filterChallenges('all')">All Challenges</button>
+      <button class="tab" data-tab="my" onclick="filterChallenges('my')">My Challenges (0)</button>
+    </div>
+
+
+
+
+    <section class="card-grid" id="challengeGrid">
+      <!-- JS will inject cards here -->
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <button onclick="location.href='home.html'">🏠 Home</button>
+    <button onclick="location.href='create.html'">➕ Create</button>
+    <button onclick="location.href='Shorts.html'">🎬 Shorts</button>
+    <button onclick="location.href='account.html'">👤 Account</button>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>

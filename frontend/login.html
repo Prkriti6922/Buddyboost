@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | BuddyBoost</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+  <div class="split-container">
+
+    <!-- Left: Motivation Section -->
+    <div class="left-section">
+      <div class="motivation-box">
+        <h1>Welcome to BuddyBoost 👋</h1>
+
+        <div class="quote-box">
+          "Discipline is the bridge between goals and accomplishment."
+        </div>
+
+        <div class="quote-box">
+          "Surround yourself with those on the same mission as you."
+        </div>
+
+        <p>Thank you for choosing growth. Let's achieve greatness together!</p>
+      </div>
+    </div>
+
+    <!-- Right Side: Login / Signup Card -->
+    <div class="right-section">
+      <div class="login-container">
+
+        <!-- Branding -->
+        <div class="brand">
+          <h2>BuddyBoost</h2>
+          <p>Find motivation around you</p>
+        </div>
+
+        <div class="auth-box">
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab active" onclick="toggleTab('login')">Login</button>
+            <button class="tab" onclick="toggleTab('signup')">Sign Up</button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <div class="form-section" id="login-section">
+            <button class="google-btn" onclick="handleGoogleLogin()">
+              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+              Continue with Google
+            </button>
+
+            <div class="divider"><span>OR CONTINUE WITH EMAIL</span></div>
+
+            <form id="loginForm">
+              <input type="email" placeholder="Email" required />
+              <input type="password" placeholder="Password" required />
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+          </div>
+
+          <!-- SIGN UP FORM -->
+          <div class="form-section hidden" id="signup-section">
+            <button class="google-btn" onclick="handleGoogleLogin()">
+              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+              Sign Up with Google
+            </button>
+
+            <div class="divider"><span>OR SIGN UP WITH EMAIL</span></div>
+
+            <form id="signupForm">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email" required />
+              <input type="password" placeholder="Create Password" required />
+              <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+          </div>
+
+        </div>
+
+        <p class="bottom-note">Join challenges and boost your motivation with friends</p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>
